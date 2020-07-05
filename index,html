@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Max Raid Den Search</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="tree.js"></script>
+  <script src="objects.js"></script>
+  <script src="maxdens.js"></script>
+  <script src="displayDen.js"></script>
+</head>
+<body>
+
+<table id="main">
+<tr>
+
+<td id="ui-container">
+<div id="ui">
+  <label>Found in:</label><br>
+  <div class="indent">
+  <label>Sword: <input id="sw" type="checkbox" checked></input></label>
+  <label>Shield: <input id="sh" type="checkbox" checked></input></label><br>
+  <label>Wild Area: <input id="we" type="checkbox" checked></input></label>
+  <label>Isle of Armor: <input id="ioa" type="checkbox" checked></input></label><br><br>
+  </div>
+  
+  <label>GMax: <input id="GMax" type="checkbox"></input></label>
+  <label>HA: <input id="HA" type="checkbox"></input></label>
+  <br><br>
+  <label>Beam Type:<br><select id="rare" type="checkbox">
+    <option selected value="null"></option>
+    <option value="true">Common</option>
+    <option value="false">Rare</option>
+  </select></label>
+  <br><br>
+  <label>Pokemon:<br><input id="species" type="text" oninput="updateSuggestions(this.value);"></input></label><br>
+  <div id="suggestions"></div>
+<br>
+  <div class="center">
+    <button onclick="search();" id="search-button">Search</button>
+  </div>
+
+</div>
+</td>
+
+<td id="results-container">
+<div id="results">
+Search for the Pokemon you want, then click search to get a list of dens with that Pokemon. Once you've found a den on here, click on the Serebii link that appears alongside that den for more information and images of where that den appears ingame.
+<!--Not every den that appears in the overworld has a unique encounter table. The games have a list of just over 150 encounter tables, and every den is linked to one common table and one rare table. -->
+</div>
+</td>
+
+</tr>
+</table>
+
+</body>
+
+<script>
+var updateSuggestions = function(text)
+{
+    document.getElementById("suggestions").innerHTML = "";
+    var suggestions = poketree.search(text);
+    if (substring(suggestions.previous+suggestions.current, 0, text.length).toLowerCase() == text.toLowerCase())
+        suggestions = suggestions.suggest();
+    else
+        suggestions = ["Name not found"];
+    for (var i = 0; i < suggestions.length; i++)
+    {
+        var pokemon = document.createElement("p");
+        pokemon.innerText = suggestions[i];
+        pokemon.classList.add("suggestion");
+        pokemon.addEventListener("click", function() {
+            document.getElementById("species").value = this.innerText;
+            updateSuggestions(this.innerText);
+        });
+        document.getElementById("suggestions").appendChild(pokemon);
+    }
+};
+updateSuggestions("");
+
+var checkRequirements = function(den, pokemon)
+{
+    if (den < 95 && !document.getElementById("we").checked) // check for Wild Area
+        return false;
+    if (den > 95 && !document.getElementById("ioa").checked) // check for Isle of Armor
+        return false;
+    if (document.getElementById("GMax").checked && (!dens[den].gmax || !(document.getElementById("sw").checked && dens[den].pokemon[11].name[0] == pokemon || document.getElementById("sh").checked && dens[den].pokemon[11].name[1] == pokemon))) // check for GMax
+        return false;
+    if (document.getElementById("HA").checked) // check for HA
+    {
+        var ha = false;
+        for (var i = 0; i < dens[den].pokemon.length; i++)
+        {
+            if (document.getElementById("sw").checked && dens[den].pokemon[i].name[0] == pokemon && dens[den].pokemon[i].ha[0] > 0)
+            {
+                ha = true;
+                break;
+            }
+            if (document.getElementById("sh").checked && dens[den].pokemon[i].name[1] == pokemon && dens[den].pokemon[i].ha[1] > 0)
+            {
+                ha = true;
+                break;
+            }
+        }
+        if (ha == false)
+            return false;
+    }
+    if (JSON.parse(document.getElementById("rare").value) == dens[den].rare)
+        return false;
+    
+    return true;
+};
+
+var search = function()
+{
+    document.getElementById("results").innerHTML = "";
+    var result = poketree.search(document.getElementById("species").value).dens;
+    if (result == undefined || result.sw.length == 0 && result.sh.length == 0)
+        document.getElementById("results").innerText = "Please enter a valid Pokemon name."
+    else
+    {
+    var lastDen = -1;
+    var swCount = 0, shCount = 0;
+    if (document.getElementById("sw").checked == false)
+        swCount = result.sw.length;
+    if (document.getElementById("sh").checked == false)
+        shCount = result.sh.length;
+    while (swCount < result.sw.length || shCount < result.sh.length)
+    {
+        if (shCount >= result.sh.length || result.sw[swCount] < result.sh[shCount])
+        {
+            if (lastDen != result.sw[swCount] && checkRequirements(result.sw[swCount], document.getElementById("species").value))
+            {
+                displayDen(result.sw[swCount], document.getElementById("species").value, document.getElementById("HA").checked, document.getElementById("GMax").checked);
+                lastDen = result.sw[swCount];
+            }
+            swCount++;
+        }
+        else if (swCount >= result.sw.length || result.sw[swCount] > result.sh[shCount])
+        {
+            if (lastDen != result.sh[shCount] && checkRequirements(result.sh[shCount], document.getElementById("species").value))
+            {
+                displayDen(result.sh[shCount], document.getElementById("species").value, document.getElementById("HA").checked, document.getElementById("GMax").checked);
+                lastDen = result.sh[shCount];
+            }
+            shCount++;
+        }
+        else if (result.sw[swCount] == result.sh[shCount])
+        {
+            if (lastDen != result.sw[swCount] && checkRequirements(result.sw[swCount], document.getElementById("species").value))
+            {
+                displayDen(result.sw[swCount], document.getElementById("species").value, document.getElementById("HA").checked, document.getElementById("GMax").checked);
+                lastDen = result.sw[swCount];
+            }
+            swCount++;
+            shCount++;
+        }
+        else
+        {
+            console.log("error");
+            break;
+        }
+    }
+    
+    if (document.getElementById("results").children.length == 0)
+        document.getElementById("results").innerText = "No results found."
+    }
+};
+
+</script>
+</html>
