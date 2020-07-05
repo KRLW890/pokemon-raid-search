@@ -1,0 +1,290 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: "Trebuchet MS", "Gill Sans MT", sans-serif;
+    background: rgb(170, 170, 170);
+}
+
+table {
+    width: 90%;
+    margin: auto;
+    margin-top: 1.5%;
+    border-spacing: 0px;
+}
+
+#main {
+    height: 90%;
+}
+
+td#ui-container, td#results-container {
+    //height: 550px; //78%;
+    padding: 3%;
+    border-radius: 80px;
+}
+
+td#ui-container {
+    width: 20%;
+    background: rgb(255, 0, 0);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    vertical-align: top;
+}
+
+td#results-container {
+    background: white;
+    width: 60%;
+    padding: 1%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#ui {
+    margin: 2% 0% 2% 5%;
+    padding: 3% 2% 3% 2%;
+    //text-align: center;
+}
+
+#results {
+    margin: 2% 5% 2% 0%;
+    padding: 3% 2% 3% 2%;
+    overflow: auto;
+    height: 80%;
+}
+
+label {
+    display: inline-block;
+    color: white;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.indent {
+    margin-left: 6%;
+}
+
+#GMax, #HA {
+    border-radius: 0px;
+    
+}
+
+#rare {
+    border-radius: 30px;
+    margin-left: 13%;
+    height: 25%;
+    width: 100%;
+    padding: 2% 5% 2% 5%;
+    margin-top: 2%;
+}
+
+#species {
+    font-size: 1.3em;
+    border-radius: 30px;
+    margin-left: 5%;
+    width: 87%;
+    padding: 2% 5% 2% 5%;
+}
+
+#suggestions {
+    background: white;
+    margin: 5% 0px 0px 7%;
+    overflow: auto;
+    height: 250px;
+}
+
+.suggestion {
+    margin: 0%;
+    padding: 5%;
+}
+
+.suggestion:hover {
+    background: rgb(200, 200, 200);
+    cursor: pointer;
+}
+.suggestion:active {
+    background: rgb(150, 150, 150);
+}
+
+#search-button {
+    margin: auto;
+    border-radius: 10px;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
+#search-button:active {
+    background: rgb(210, 210, 210);
+}
+
+.center {
+    text-align: center;
+}
+
+
+.top-right, .top-left {
+    font-size: 1.2em;
+    vertical-align: bottom;
+    height: 35px;
+    border-bottom: none;
+}
+
+.top-left {
+    border-top-left-radius: 20px;
+    text-align: left;
+    padding-left: 5%;
+    border-right: none;
+}
+
+.top-right {
+    border-top-right-radius: 20px;
+    text-align: right;
+    padding-right: 5%;
+    border-left: none;
+}
+
+.result-location {
+    text-align: center;
+    height: 20px;
+}
+
+.serebii-link {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 30px;
+    border-top: none;
+    text-align: center;
+}
+
+.version-name {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+.pokemon-cell {
+    padding-bottom: 5px;
+}
+
+.target-mon {
+    font-weight: bold;
+}
+
+.rare {
+    background: rgb(255, 85, 200); //rgb(237, 54, 180);
+}
+
+.common {
+    background: rgb(237, 180, 180);
+}
+
+
+.normal {
+    border-left: 3px solid rgb(164, 164, 116);
+    border-right: 3px solid rgb(164, 164, 116);
+}
+
+.fire {
+    border-left: 3px solid rgb(236, 122, 40);
+    border-right: 3px solid rgb(236, 122, 40);
+}
+
+.water {
+    border-left: 3px solid rgb(96, 138, 240);
+    border-right: 3px solid rgb(96, 138, 240);
+}
+
+.electric {
+    border-left: 3px solid rgb(247, 206, 41);
+    border-right: 3px solid rgb(247, 206, 41);
+}
+
+.grass {
+    border-left: 3px solid rgb(114, 193, 74);
+    border-right: 3px solid rgb(114, 193, 74);
+}
+
+.ice {
+    border-left: 3px solid rgb(144, 213, 213);
+    border-right: 3px solid rgb(144, 213, 213);
+}
+
+.fighting {
+    border-left: 3px solid rgb(184, 46, 38);
+    border-right: 3px solid rgb(184, 46, 38);
+}
+
+.poison {
+    border-left: 3px solid rgb(153, 61, 153);
+    border-right: 3px solid rgb(153, 61, 153);
+}
+
+.ground {
+    border-left: 3px solid rgb(222, 188, 95);
+    border-right: 3px solid rgb(222, 188, 95);
+}
+
+.flying {
+    border-left: 3px solid rgb(165, 142, 234);
+    border-right: 3px solid rgb(165, 142, 234);
+}
+
+.psychic {
+    border-left: 3px solid rgb(247, 80, 131);
+    border-right: 3px solid rgb(247, 80, 131);
+}
+
+.bug {
+    border-left: 3px solid rgb(186, 181, 81);
+    border-right: 3px solid rgb(186, 181, 81);
+}
+
+.rock {
+    border-left: 3px solid rgb(179, 156, 54);
+    border-right: 3px solid rgb(179, 156, 54);
+}
+
+.ghost {
+    border-left: 3px solid rgb(110, 86, 148);
+    border-right: 3px solid rgb(110, 86, 148);
+}
+
+.dragon {
+    border-left: 3px solid rgb(107, 50, 246);
+    border-right: 3px solid rgb(107, 50, 246);
+}
+
+.dark {
+    border-left: 3px solid rgb(108, 85, 69);
+    border-right: 3px solid rgb(108, 85, 69);
+}
+
+.steel {
+    border-left: 3px solid rgb(179, 179, 205);
+    border-right: 3px solid rgb(179, 179, 205);
+}
+
+.fairy {
+    border-left: 3px solid rgb(231, 145, 231);
+    border-right: 3px solid rgb(231, 145, 231);
+}
+
+.normal, .fire, .water, .electric, .grass, .ice, .fighting, .poison, .ground, .flying, .psychic, .bug, .rock, .ghost, .dragon, .dark, .steel, .fairy {
+    text-align: center;
+}
+/*
+.body-left {
+    text-align: center;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.body-right {
+    text-align: center;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}*/
