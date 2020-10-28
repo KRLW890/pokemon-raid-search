@@ -8,8 +8,10 @@ var displayDen = function(den, pokemon, ha, gmax)
     output.rows[1].cells[0].classList.add("result-location");
     if (den < 95)
         output.rows[1].cells[0].innerText = "Wild Area";
-    if (den > 95)
+    else if (den > 95 && den < 158)
         output.rows[1].cells[0].innerText = "Isle of Armor";
+    else if (den > 157)
+        output.rows[1].cells[0].innerText = "Crown Tundra";
     output.insertRow();
     for (var i = 0; i < 2; i++)
     {
@@ -66,10 +68,10 @@ var displayDen = function(den, pokemon, ha, gmax)
                 pokeList.insertRow();
             pokeList.rows[Math.floor(j/3)].insertCell();
             pokeList.rows[Math.floor(j/3)].cells[j%3].classList.add("pokemon-cell");
-            if (dens[den].pokemon[j].gmax)
+            if (dens[den].pokemon[j].gmax[i])
                 pokeList.rows[Math.floor(j/3)].cells[j%3].innerText += "GMax ";
             pokeList.rows[Math.floor(j/3)].cells[j%3].innerText += dens[den].pokemon[j].name[i];
-            if (dens[den].pokemon[j].name[i] != pokemon)
+            if (dens[den].pokemon[j].name[i].toLowerCase() != pokemon.toLowerCase())
                 target = false;
             switch (dens[den].pokemon[j].ha[i])
             {
@@ -91,7 +93,7 @@ var displayDen = function(den, pokemon, ha, gmax)
                     pokeList.rows[Math.floor(j/3)].cells[j%3].innerText += "\nAlways Own Tempo";
                 break;
             }
-            if (gmax && !dens[den].pokemon[j].gmax)
+            if (gmax && !dens[den].pokemon[j].gmax[i])
                 target = false;
             if (target)
                 pokeList.rows[Math.floor(j/3)].cells[j%3].classList.add("target-mon");
