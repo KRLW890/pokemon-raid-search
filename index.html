@@ -20,7 +20,8 @@
   <label>Sword: <input id="sw" type="checkbox" checked></input></label>
   <label>Shield: <input id="sh" type="checkbox" checked></input></label><br>
   <label>Wild Area: <input id="we" type="checkbox" checked></input></label>
-  <label>Isle of Armor: <input id="ioa" type="checkbox" checked></input></label><br><br>
+  <label>Isle of Armor: <input id="ioa" type="checkbox" checked></input></label><br>
+  <label>Crown Tundra: <input id="ct" type="checkbox" checked></input></label><br><br>
   </div>
   
   <label>GMax: <input id="GMax" type="checkbox"></input></label>
@@ -81,10 +82,13 @@ var checkRequirements = function(den, pokemon)
 {
     if (den < 95 && !document.getElementById("we").checked) // check for Wild Area
         return false;
-    if (den > 95 && !document.getElementById("ioa").checked) // check for Isle of Armor
+    if (den > 95 && den < 158 && !document.getElementById("ioa").checked) // check for Isle of Armor
         return false;
-    if (document.getElementById("GMax").checked && (!dens[den].gmax || !(document.getElementById("sw").checked && dens[den].pokemon[11].name[0] == pokemon || document.getElementById("sh").checked && dens[den].pokemon[11].name[1] == pokemon))) // check for GMax
+    if (den > 157 && !document.getElementById("ct").checked) // check for Crown Tundra
         return false;
+    if (document.getElementById("GMax").checked && !(document.getElementById("sw").checked && dens[den].pokemon[11].name[0].toLowerCase() == pokemon.toLowerCase() && dens[den].gmax[0] || document.getElementById("sh").checked && dens[den].pokemon[11].name[1].toLowerCase() == pokemon.toLowerCase() && dens[den].gmax[1])) // check for GMax
+        return false;
+    
     if (document.getElementById("HA").checked) // check for HA
     {
         var ha = false;
