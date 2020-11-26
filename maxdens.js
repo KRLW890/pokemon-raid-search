@@ -317,7 +317,7 @@ var dens =
     // 158
     new Den("Normal", "Normal", false, [new Pokemon("Audino", 1),new Pokemon("Swablu"),new Pokemon("Wooloo"),new Pokemon("Swablu"),new Pokemon("Munchlax"),new Pokemon("Greedent"),new Pokemon("Dubwool"),new Pokemon("Altaria", 1),new Pokemon("Altaria", 1),new Pokemon("Dubwool", 1),new Pokemon("Snorlax", 1),new Pokemon("Snorlax", 1)]),
     // 159
-    new Den("Narmal", "Normal", true, [new Pokemon("Delibird", 2),new Pokemon("Swablu", 2),new Pokemon("Skwovet", 2),new Pokemon("Swablu", 2),new Pokemon("Greedent", 2),new Pokemon("Greedent", 2),new Pokemon("Dubwool", 2),new Pokemon("Altaria", 2),new Pokemon("Altaria", 2),new Pokemon("Dubwool", 2),new Pokemon("Snorlax", 2),new Pokemon("Snorlax", 2, true)]),
+    new Den("Normal", "Normal", true, [new Pokemon("Delibird", 2),new Pokemon("Swablu", 2),new Pokemon("Skwovet", 2),new Pokemon("Swablu", 2),new Pokemon("Greedent", 2),new Pokemon("Greedent", 2),new Pokemon("Dubwool", 2),new Pokemon("Altaria", 2),new Pokemon("Altaria", 2),new Pokemon("Dubwool", 2),new Pokemon("Snorlax", 2),new Pokemon("Snorlax", 2, true)]),
     // 160
     new Den("Fire", "Fire", false, [new Pokemon("Audino", 1),new Pokemon("Magby"),new Pokemon("Sizzlipede"),new Pokemon("Magby"),new Pokemon("Heatmor"),new Pokemon("Lampent"),new Pokemon("Heatmor"),new Pokemon("Magmar", 1),new Pokemon("Centiskorch", 1),new Pokemon("Chandelure", 1),new Pokemon("Magmar", 1),new Pokemon("Magmortar", 1)]),
     // 161
