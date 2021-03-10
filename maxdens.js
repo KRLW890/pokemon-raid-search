@@ -62,7 +62,7 @@ var dens =
     // 30
     new Den("Poison", "Poison", false, [new Pokemon("Toxel"),new Pokemon("Gastly"),new Pokemon("Skorupi"),new Pokemon("Oddish"),new Pokemon("Gloom"),new Pokemon("Haunter"),new Pokemon("Koffing"),new Pokemon("Qwilfish"),new Pokemon("Vileplume"),new Pokemon("Roselia", 1),new Pokemon("Toxtricity", 1),new Pokemon("Weezing-Galar", 1)]),
     // 31
-    new Den("Flying", "Flying", false, [new Pokemon("Pidove"),new Pokemon("Hoothoot"),new Pokemon("Natu"),new ExclusivePair("Rufflet", "Vullaby"),new Pokemon("Woobat"),new Pokemon("Tranquill"),new Pokemon("Unfeazant"),new Pokemon("Noctowl"),new Pokemon("Swoobat"),new Pokemon("Xatu", 1),new ExclusivePair("Braviary", "Mandibuzz", 1, 1),new Pokemon("Sigilyph", 1)]),
+    new Den("Flying", "Flying", false, [new Pokemon("Pidove"),new Pokemon("Hoothoot"),new Pokemon("Natu"),new ExclusivePair("Rufflet", "Vullaby"),new Pokemon("Woobat"),new Pokemon("Tranquill"),new Pokemon("Unfezant"),new Pokemon("Noctowl"),new Pokemon("Swoobat"),new Pokemon("Xatu", 1),new ExclusivePair("Braviary", "Mandibuzz", 1, 1),new Pokemon("Sigilyph", 1)]),
     // 32
     new Den("Flying", "Flying", false, [new Pokemon("Rookidee"),new Pokemon("Noibat"),new Pokemon("Wingull"),new Pokemon("Natu"),new Pokemon("Drifloon"),new Pokemon("Corvisquire"),new Pokemon("Drifblim"),new Pokemon("Pelipper"),new Pokemon("Xatu"),new Pokemon("Corviknight", 1),new Pokemon("Hawlucha", 1),new Pokemon("Cramorant")]),
     // 33
@@ -78,7 +78,7 @@ var dens =
     // 38
     new Den("Dragon", "Dragon", false, [new Pokemon("Noibat"),new Pokemon("Applin"),new ExclusivePair("Jangmo-o", "Goomy"),new Pokemon("Dreepy"),new Pokemon("Noibat"),new Pokemon("Applin"),new Pokemon("Drakloak"),new Pokemon("Noivern"),new ExclusivePair("Hakamo-o", "Sliggoo"),new ExclusivePair("Kommo-o", "Goodra", 1, 1),new ExclusivePair("Flapple", "Appletun", 1, 1),new Pokemon("Dragapult", 1)]),
     // 39
-    new Den("Normal", "Normal", false, [new Pokemon("Bunnelby"),new Pokemon("Hoothoot"),new Pokemon("Pidove"),new Pokemon("Minccino"),new Pokemon("Helioptile"),new Pokemon("Stufful"),new Pokemon("Diggersby"),new Pokemon("Noctowl"),new Pokemon("Unfeazant"),new Pokemon("Heliolisk", 1),new Pokemon("Cinccino", 1),new Pokemon("Bewear", 1)]),
+    new Den("Normal", "Normal", false, [new Pokemon("Bunnelby"),new Pokemon("Hoothoot"),new Pokemon("Pidove"),new Pokemon("Minccino"),new Pokemon("Helioptile"),new Pokemon("Stufful"),new Pokemon("Diggersby"),new Pokemon("Noctowl"),new Pokemon("Unfezant"),new Pokemon("Heliolisk", 1),new Pokemon("Cinccino", 1),new Pokemon("Bewear", 1)]),
     // 40
     new Den("Normal", "Normal", false, [new Pokemon("Skwovet"),new Pokemon("Wooloo"),new Pokemon("Zigzagoon-Galar"),new Pokemon("Munchlax"),new ExclusivePair("Indeedee-M", "Indeedee-F"),new Pokemon("Greedent"),new Pokemon("Linoone-Galar"),new Pokemon("Greedent"),new Pokemon("Dubwool"),new Pokemon("Diggersby", 1),new ExclusivePair("Braviary", "Oranguru", 1, 1),new Pokemon("Snorlax", 1)]),
     // 41
@@ -130,7 +130,7 @@ var dens =
     // 64
     new Den("Dragon", "Dragon", true, [new ExclusivePair("Trapinch", "Axew"),new Pokemon("Applin"),new ExclusivePair("Axew", "Trapinch"),new ExclusivePair("Jangmo-o", "Goomy"),new Pokemon("Dreepy"),new ExclusivePair("Fraxure", "Vibrava"),new ExclusivePair("Hakamo-o", "Sliggoo"),new ExclusivePair("Turtonator", "Drampa"),new ExclusivePair("Kommo-o", "Goodra", 1, 1),new Pokemon("Drakloak", 1),new ExclusivePair("Haxorus", "Flygon", 1, 0),new Pokemon("Dragapult", 1)]),
     // 65
-    new Den("Normal", "Normal", true, [new Pokemon("Bunnelby"),new Pokemon("Pidove"),new Pokemon("Skwovet"),new Pokemon("Eevee"),new Pokemon("Tranquill"),new Pokemon("Wooloo"),new Pokemon("Unfeazant"),new Pokemon("Dubwool"),new ExclusivePair("Braviary", "Oranguru", 1, 1),new ExclusivePair("Indeedee-M", "Indeedee-F", 1, 1),new Pokemon("Eevee", 1),new Pokemon("Snorlax", 1)]),
+    new Den("Normal", "Normal", true, [new Pokemon("Bunnelby"),new Pokemon("Pidove"),new Pokemon("Skwovet"),new Pokemon("Eevee"),new Pokemon("Tranquill"),new Pokemon("Wooloo"),new Pokemon("Unfezant"),new Pokemon("Dubwool"),new ExclusivePair("Braviary", "Oranguru", 1, 1),new ExclusivePair("Indeedee-M", "Indeedee-F", 1, 1),new Pokemon("Eevee", 1),new Pokemon("Snorlax", 1)]),
     // 66
     new Den("Normal", "Normal", true, [new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto"),new Pokemon("Ditto", 1),new Pokemon("Ditto", 1),new Pokemon("Ditto", 1),new Pokemon("Ditto", 1)]),
     // 67
@@ -214,15 +214,15 @@ var dens =
     // 107
     new Den("Flying", "Flying", false, [new Pokemon("Chansey"),new Pokemon("Fletchling"),new Pokemon("Woobat"),new ExclusivePair("Rufflet", "Vullaby"),new Pokemon("Emolga"),new Pokemon("Fletchinder"),new Pokemon("Fletchinder"),new ExclusivePair("Braviary", "Mandibuzz", 1, 1),new Pokemon("Emolga", 1),new Pokemon("Swoobat", 1),new ExclusivePair("Braviary", "Mandibuzz", 1, 1),new Pokemon("Talonflame", 1)]),
     // 108
-    new Den("Flying", "Flying", true, [new Pokemon("Blissey", 2),new Pokemon("Hoothoot", 2),new Pokemon("Pidove", 2),new ExclusivePair("Rufflet", "Vullaby", 2, 2),new Pokemon("Tranquill", 2),new Pokemon("Swoobat", 2),new Pokemon("Noctowl", 2),new Pokemon("Unfeazant", 2),new Pokemon("Talonflame", 2),new Pokemon("Emolga", 2),new ExclusivePair("Braviary", "Mandibuzz", 2, 2),new Pokemon("Talonflame", 2)]),
+    new Den("Flying", "Flying", true, [new Pokemon("Blissey", 2),new Pokemon("Hoothoot", 2),new Pokemon("Pidove", 2),new ExclusivePair("Rufflet", "Vullaby", 2, 2),new Pokemon("Tranquill", 2),new Pokemon("Swoobat", 2),new Pokemon("Noctowl", 2),new Pokemon("Unfezant", 2),new Pokemon("Talonflame", 2),new Pokemon("Emolga", 2),new ExclusivePair("Braviary", "Mandibuzz", 2, 2),new Pokemon("Talonflame", 2)]),
     // 109
     new Den("Bug", "Bug", false, [new Pokemon("Chansey"),new ExclusivePair("Pinsir", "Heracross"),new Pokemon("Dwebble"),new Pokemon("Dottler"),new ExclusivePair("Pinsir", "Heracross"),new ExclusivePair("Pinsir", "Heracross"),new Pokemon("Crustle"),new Pokemon("Scyther", 1),new Pokemon("Scyther", 1),new ExclusivePair("Pinsir", "Heracross", 1, 1),new Pokemon("Orbeetle", 1),new Pokemon("Scizor", 1)]),
     // 110
     new Den("Bug", "Bug", true, [new Pokemon("Blissey", 2),new Pokemon("Scyther", 2),new ExclusivePair("Pinsir", "Heracross", 2, 2),new Pokemon("Shuckle", 2),new Pokemon("Whirlipede", 2),new Pokemon("Scyther", 2),new Pokemon("Crustle", 2),new Pokemon("Scolipede", 2),new Pokemon("Accelgor", 2),new Pokemon("Escavalier", 2),new ExclusivePair("Pinsir", "Heracross", 2, 2),new Pokemon("Scizor", 2)]),
     // 111
-    new Den("Grass", "Grass", false, [new Pokemon("Chansey"),new Pokemon("Foongus"),new Pokemon("Fomantis"),new Pokemon("Petilil"),new Pokemon("Lurantis"),new Pokemon("Amoongus"),new Pokemon("Tangela"),new Pokemon("Lilligant", 1),new Pokemon("Lurantis", 1),new Pokemon("Lilligant", 1),new Pokemon("Amoongus", 1),new Pokemon("Tangrowth", 1)]),
+    new Den("Grass", "Grass", false, [new Pokemon("Chansey"),new Pokemon("Foongus"),new Pokemon("Fomantis"),new Pokemon("Petilil"),new Pokemon("Lurantis"),new Pokemon("Amoonguss"),new Pokemon("Tangela"),new Pokemon("Lilligant", 1),new Pokemon("Lurantis", 1),new Pokemon("Lilligant", 1),new Pokemon("Amoonguss", 1),new Pokemon("Tangrowth", 1)]),
     // 112
-    new Den("Grass", "Grass", true, [new Pokemon("Blissey", 2),new Pokemon("Tangela", 2),new Pokemon("Fomantis", 2),new Pokemon("Foongus", 2),new Pokemon("Lurantis", 2),new Pokemon("Maractus", 2),new Pokemon("Lilligant", 2),new Pokemon("Lurantis", 2),new Pokemon("Amoongus", 2),new Pokemon("Tangrowth", 2),new Pokemon("Lilligant", 2),new Pokemon("Abomasnow", 2)]),
+    new Den("Grass", "Grass", true, [new Pokemon("Blissey", 2),new Pokemon("Tangela", 2),new Pokemon("Fomantis", 2),new Pokemon("Foongus", 2),new Pokemon("Lurantis", 2),new Pokemon("Maractus", 2),new Pokemon("Lilligant", 2),new Pokemon("Lurantis", 2),new Pokemon("Amoonguss", 2),new Pokemon("Tangrowth", 2),new Pokemon("Lilligant", 2),new Pokemon("Abomasnow", 2)]),
     // 113
     new Den("Fire", "Fire", false, [new Pokemon("Chansey"),new Pokemon("Fletchling"),new Pokemon("Salandit"),new Pokemon("Larvesta"),new Pokemon("Salandit"),new Pokemon("Fletchinder"),new Pokemon("Larvesta"),new Pokemon("Torkoal", 1),new Pokemon("Talonflame", 1),new Pokemon("Salazzle", 1),new Pokemon("Torkoal", 1),new Pokemon("Volcarona", 1)]),
     // 114
@@ -238,7 +238,7 @@ var dens =
     // 119
     new Den("Poison", "Poison", false, [new Pokemon("Chansey"),new Pokemon("Venipede"),new Pokemon("Skorupi"),new Pokemon("Tentacool"),new Pokemon("Tentacool"),new Pokemon("Whirlipede"),new Pokemon("Whirlipede"),new Pokemon("Drapion", 1),new Pokemon("Tentacruel", 1),new Pokemon("Drapion", 1),new Pokemon("Tentacruel", 1),new Pokemon("Scolipede", 1)]),
     // 120
-    new Den("Poison", "Poison", true, [new Pokemon("Blissey", 2),new Pokemon("Mereanie", 2),new Pokemon("Qwilfish", 2),new Pokemon("Whirlipede", 2),new Pokemon("Whirlipede", 2),new Pokemon("Qwilfish", 2),new Pokemon("Amoongus", 2),new Pokemon("Toxapex", 2),new Pokemon("Scolipede", 2),new Pokemon("Drapion", 2),new Pokemon("Weezing-Galar", 2),new Pokemon("Scolipede", 2)]),
+    new Den("Poison", "Poison", true, [new Pokemon("Blissey", 2),new Pokemon("Mereanie", 2),new Pokemon("Qwilfish", 2),new Pokemon("Whirlipede", 2),new Pokemon("Whirlipede", 2),new Pokemon("Qwilfish", 2),new Pokemon("Amoonguss", 2),new Pokemon("Toxapex", 2),new Pokemon("Scolipede", 2),new Pokemon("Drapion", 2),new Pokemon("Weezing-Galar", 2),new Pokemon("Scolipede", 2)]),
     // 121
     new Den("Dark", "Dark", false, [new Pokemon("Chansey"),new Pokemon("Carvanha"),new Pokemon("Pawniard"),new Pokemon("Carvanha"),new Pokemon("Zorua"),new Pokemon("Sharpedo"),new Pokemon("Malamar"),new Pokemon("Drapion", 1),new Pokemon("Bisharp", 1),new Pokemon("Malamar", 1),new Pokemon("Sharpedo", 1),new Pokemon("Zoroark")]),
     // 122
@@ -305,7 +305,7 @@ var dens =
     // 153
     new Den("Normal", "Normal", true, [new Pokemon("Blissey", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2),new Pokemon("Ditto", 2)]),
     // 154
-    new Den("Grass", "Grass", false, [new Pokemon("Chansey"),new Pokemon("Foongus"),new Pokemon("Exeggcute"),new Pokemon("Fomantis"),new Pokemon("Tangela"),new Pokemon("Lurantis"),new Pokemon("Exeggcute"),new Pokemon("Exeggutor", 1),new Pokemon("Amoongus", 1),new Pokemon("Lurantis", 1),new Pokemon("Tangrowth", 1),new Pokemon("Venusaur", 1)]),
+    new Den("Grass", "Grass", false, [new Pokemon("Chansey"),new Pokemon("Foongus"),new Pokemon("Exeggcute"),new Pokemon("Fomantis"),new Pokemon("Tangela"),new Pokemon("Lurantis"),new Pokemon("Exeggcute"),new Pokemon("Exeggutor", 1),new Pokemon("Amoonguss", 1),new Pokemon("Lurantis", 1),new Pokemon("Tangrowth", 1),new Pokemon("Venusaur", 1)]),
     // 155
     new Den("Water", "Water", false, [new Pokemon("Chansey"),new Pokemon("Magikarp"),new Pokemon("Tentacool"),new Pokemon("Staryu"),new Pokemon("Shellder"),new Pokemon("Tentacruel"),new Pokemon("Gyarados"),new Pokemon("Tentacruel", 1),new Pokemon("Gyarados", 1),new Pokemon("Starmie", 1),new Pokemon("Cloyster", 1),new Pokemon("Blastoise", 1)]),
     // 156
