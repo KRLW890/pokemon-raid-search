@@ -94,12 +94,12 @@ var checkRequirements = function(den, pokemon)
         var ha = false;
         for (var i = 0; i < dens[den].pokemon.length; i++)
         {
-            if (document.getElementById("sw").checked && dens[den].pokemon[i].name[0] == pokemon && dens[den].pokemon[i].ha[0] > 0)
+            if (document.getElementById("sw").checked && dens[den].pokemon[i].name[0].toLowerCase() == pokemon.toLowerCase() && dens[den].pokemon[i].ha[0] > 0)
             {
                 ha = true;
                 break;
             }
-            if (document.getElementById("sh").checked && dens[den].pokemon[i].name[1] == pokemon && dens[den].pokemon[i].ha[1] > 0)
+            if (document.getElementById("sh").checked && dens[den].pokemon[i].name[1].toLowerCase() == pokemon.toLowerCase() && dens[den].pokemon[i].ha[1] > 0)
             {
                 ha = true;
                 break;
